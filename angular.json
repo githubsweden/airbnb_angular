@@ -7,8 +7,12 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
-      "schematics": {},
+      "prefix": "bwm",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -32,7 +36,7 @@
                 "src/styles"
               ]
             },
-            "scripts": [],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -138,5 +142,12 @@
       }
     }
   },
-  "defaultProject": "bwm-cli"
+  "defaultProject": "bwm-cli",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "spec": false
+      }
+    }
+  }
 }
